@@ -1,4 +1,5 @@
 import {square} from './models.js';
+import {drawPolygon} from './draw.js';
 
 function toPoint(values) {
 	return{
@@ -21,19 +22,18 @@ const context = canvas.getContext('2d');
 
 const mesh = toMesh(square);
 
-function drawPolygon(polygon, context) {
-	context.beginPath();
-	
-	const first=polygon[0];
-	context.moveTo(first.x,first.y);
-	polygon.forEach(point => {
-		context.lineTo(point.x, point.y);
-	});
-	context.lineTo(first.x, first.y);
+function perspective(point, distance) {
+	const fov = point.z + distance;
+	point.x /= fov;
+	point.z /= fov;
 }
-	
+
 context.strokeStyle = "#fff";
 mesh.forEach(polygon => {
+	polygon.forEach(point => {
+		perspective(point, 50);
+	});
+
 	drawPolygon(polygon, context);
 });
 console.log(mesh);
