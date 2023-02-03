@@ -3,6 +3,9 @@
 	<head>
 		<title>My HTML Page</title>
 		<link rel="stylesheet" type="text/css" href="modelstyle.css">
+	</head>
+	<body>
+		<div id="deck"></div>
 		<script type="text/javascript">
 			const suits = [  { name: 'hearts', url: 'https://upload.wikimedia.org/wikipedia/commons/f/f0/SuitHearts.svg' },  { name: 'diamonds', url: 'https://upload.wikimedia.org/wikipedia/commons/d/db/SuitDiamonds.svg' },  { name: 'spades', url: 'https://upload.wikimedia.org/wikipedia/commons/5/5b/SuitSpades.svg' },  { name: 'clubs', url: 'https://upload.wikimedia.org/wikipedia/commons/8/8a/SuitClubs.svg' }];
 const values = ['A', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K'];
@@ -49,8 +52,5 @@ for (let i = 0; i < deck.length; i++) {
 }
 
 		</script>
-	</head>
-	<body>
-		<div id="deck"></div>
 	</body>
 </html>
