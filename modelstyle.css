@@ -52,3 +52,20 @@ hr {
   box-shadow: 0px 0px 10px #888888;
   background: black;
 }
+
+.text {
+  display: inline;
+}
+
+.text span {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.highlight-red {
+  background-color: red;
+}
+
+.highlight-blue {
+  background-color: blue;
+}
