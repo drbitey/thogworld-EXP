@@ -24,6 +24,24 @@
   filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.5));
 }
 
+@keyframes drop-anim {
+  0% {
+    filter: drop-shadow(0px 5px 10px rgba(255,0,0,0.5));
+  }
+  25% {
+    filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.5));
+  }
+  50% {
+    filter: drop-shadow(0px 5px 10px rgba(255,0,0,0.5));
+  }
+  75% {
+    filter: drop-shadow(0px 5px 10px rgba(0,0,0,0.5));
+  }
+  100% {
+    filter: drop-shadow(0px 5px 10px rgba(255,0,0,0.5));
+  }
+}
+
 .top-left {
   position: absolute;
   top: 0;
@@ -53,6 +71,14 @@ hr {
   background: black;
 }
 
+h3 {
+	text-align: center;
+text-size: 24;
+  font-family: Verdana, sans-serif;
+  margin: auto;
+  width: 75%;
+}
+
 .text {
   display: inline;
 }
@@ -64,8 +90,14 @@ hr {
 
 .highlight-red {
   background-color: red;
+animation: drop-anim 5s linear infinite;
 }
 
 .highlight-blue {
   background-color: blue;
 }
+
+.highlighted {
+      border-color: red;
+animation: drop-anim 2s linear infinite;
+    }

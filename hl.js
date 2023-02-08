@@ -12,6 +12,9 @@ text.addEventListener('mouseover', e => {
     }
     if (e.target.nextElementSibling) {
       e.target.nextElementSibling.classList.add('highlight-blue');
+		if (e.target.nextElementSibling.nextElementSibling) {
+      e.target.nextElementSibling.nextElementSibling('highlight-blue');
+    }
     }
   }
 });
