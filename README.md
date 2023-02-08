@@ -1,4 +1,5 @@
 # thogworld-EXP
+https://drbitey.github.io/thogworld-EXP/
 Experimental site for THOG WORLD
 
 -Contains silly stuff that may be added in the future
